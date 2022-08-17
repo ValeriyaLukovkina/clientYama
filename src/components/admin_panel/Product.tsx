@@ -66,13 +66,17 @@ export function Product({ product, remove }: ProductProps) {
         setPrice(product.price)
         setDescription(product.description)
     }
+
+    const isImageIdExist = (imageId: number) => {
+        return imageId != null && imageId != -1
+    }
     return (
         <div className="border py-2 px-4 rounded flex flex-col items-center m-10 mb-2">
 
             <p> Категория: {type}</p>
             <p> Название: {name}</p>
             <div className="flex flex-row items-center mb-2 space-x-10">
-                {imageId != null && imageId != -1
+                { isImageIdExist(imageId)
                     ? <Image
                         imageId={imageId}
                         src={'http://localhost:8088/images/'}/>
@@ -85,13 +89,15 @@ export function Product({ product, remove }: ProductProps) {
             <p> Цена: {price}</p>
 
             <div className="flex flex-row items-center mb-2 space-x-1">
-                <button className="py-2 px-4 border bg-orange-400"
-                        onClick={ async (event) => {
+                { isImageIdExist(imageId) &&
+                        <button className="py-2 px-4 border bg-orange-400"
+                            onClick={ async (event) => {
                             event.preventDefault()
                             await axios.post(urlDeleteImage)
                             setImageId(-1)
-                        }}
-                >Удалить фотографию</button>
+                            }}
+                            >Удалить фотографию</button>}
+
                 <button onClick={() => modalOption('1')}
                         className="py-2 px-4 border bg-green-400"
                 >Добавить(Изменить) фотографию</button>

@@ -22,7 +22,7 @@ export function AdminPanel() {
     }
 
     const searchedProducts = useMemo(() => {
-        return products.filter(p => p.name.toLowerCase().includes(searchQuery))
+        return products.filter(p => p.name.toLowerCase().includes(searchQuery.toLowerCase()))
     }, [searchQuery, products])
 
     async function fetchProducts() {

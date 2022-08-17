@@ -9,7 +9,7 @@ export function App() {
 
     return (
         <Routes>
-            {/*<Route path="/" element={<SetupMenu/>}/>*/}
+            <Route path="/" element={<SetupMenu/>}/>
             <Route path="/admin" element={<AdminPanel/>}/>
         </Routes>
     )

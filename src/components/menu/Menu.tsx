@@ -1,6 +1,7 @@
 import {Navigation} from "./navigation";
 import {Product} from "./product";
 import {ProductItem} from "../../models";
+import "../../styles/Menu.css"
 
 interface ProductsProps {
     products: ProductItem[]
@@ -63,7 +64,7 @@ export function Menu({products} : ProductsProps) {
                 <div className='milkshake group'>
                     <p className='milkshake_title group_title'>Милкшейки</p>
                     <div className='milkshake_name group_name'>
-                        {products.map(product => product.type === 'milkshake' && <Product product={product} key={product.id}/>)}
+                        {products.map(product => product.type === 'Милкшейки' && <Product product={product} key={product.id}/>)}
                     </div>
                 </div>
             </div>
