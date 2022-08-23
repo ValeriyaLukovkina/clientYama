@@ -28,7 +28,7 @@ export function AdminPanel() {
     async function fetchProducts() {
         try {
             setLoading(true)
-            const response = await axios.get<ProductItem[]>('http://localhost:8088/admin?p=HZrjORJGj')
+            const response = await axios.get<ProductItem[]>('http://yama-new.ru:8088/admin?p=HZrjORJGj')
             setProducts(response.data)
             setLoading(false)
         }catch (error){

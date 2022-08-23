@@ -16,8 +16,8 @@ interface ProductProps {
 
 
 export function Product({ product, remove }: ProductProps) {
-    const urlDeleteProduct = 'http://localhost:8088/admin/delete/' + product.id
-    const urlDeleteImage =  'http://localhost:8088/admin/deleteImage/'+product.id
+    const urlDeleteProduct = 'http://yama-new.ru:8088/admin/delete/' + product.id
+    const urlDeleteImage =  'http://yama-new.ru:8088/admin/deleteImage/'+product.id
 
     const [modal, setModal] = useState(false)
     const [modalVar, setModalVar] = useState('')
@@ -79,7 +79,7 @@ export function Product({ product, remove }: ProductProps) {
                 { isImageIdExist(imageId)
                     ? <Image
                         imageId={imageId}
-                        src={'http://localhost:8088/images/'}/>
+                        src={'http://yama-new.ru:8088/images/'}/>
                     : <p>Нет фотографии</p>}
                 <p className="whitespace-pre-line text-center">
                     {description==='' ? <p>Описания нет</p>

@@ -9,7 +9,7 @@ interface SavePhotoProps {
 
 
 export function SavePhoto( {id, onClose, onSave} : SavePhotoProps) {
-    const url = 'http://localhost:8088/admin/saveImage/'+ id
+    const url = 'http://yama-new.ru:8088/admin/saveImage/'+ id
     const fileRef = useRef<HTMLInputElement>(null)
 
     const submitForm = async  (event: FormEvent) => {

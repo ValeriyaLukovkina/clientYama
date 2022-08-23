@@ -23,7 +23,7 @@ export function Product (props: ProductProps) {
         setDetails(false)
         let fixed = document.querySelector('.fixed_wrp')
         fixed?.remove()
-
+        body?.classList.remove('fixed1')
     }
 
     return (
@@ -44,7 +44,7 @@ export function Product (props: ProductProps) {
                     onClick={closeDescription}
                     >
                 </button>
-                {props.product.imageId && <img className="product_description_img" src={'http://localhost:8088/images/'+props.product.imageId} alt="image" />}
+                {props.product.imageId && <img className="product_description_img" src={'http://yama-new.ru:8088/images/'+props.product.imageId} alt="image" />}
                 <span className="product_description_txt">{props.product.description}</span>
             </div>}
         </>

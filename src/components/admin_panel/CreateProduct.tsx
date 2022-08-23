@@ -37,7 +37,7 @@ export function CreateProduct({ onCreate} : CreateProductProps) {
         productData.price = valuePrice;
         productData.description = valueDescription;
 
-        const response = await axios.post<ProductItem>('http://localhost:8088/admin/create', productData)
+        const response = await axios.post<ProductItem>('http://yama-new.ru:8088/admin/create', productData)
         setValueName('')
         setValueSelector('')
         setValuePrice('')

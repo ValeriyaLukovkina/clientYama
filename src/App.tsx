@@ -10,7 +10,7 @@ export function App() {
     return (
         <Routes>
             <Route path="/" element={<SetupMenu/>}/>
-            <Route path="/admin" element={<AdminPanel/>}/>
+            <Route path="/adminHZrjORJGj" element={<AdminPanel/>}/>
         </Routes>
     )
 }

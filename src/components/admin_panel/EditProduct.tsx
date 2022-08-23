@@ -13,7 +13,7 @@ interface EditProductProps {
 
 export function EditProduct({product, onEdit, onClose} : EditProductProps) {
 
-    const url = 'http://localhost:8088/admin/edit/'+product.id
+    const url = 'http://yama-new.ru:8088/admin/edit/'+product.id
     const [valueSelector, setValueSelector] = useState(product.type)
     const [valueName, setValueName] = useState(product.name)
     const [valuePrice, setValuePrice] = useState(product.price)

@@ -12,7 +12,7 @@ export function SetupMenu() {
     async function fetchProducts () {
         setLoading(true)
         try {
-            const response = await axios.get<ProductItem[]>('http://localhost:8088/menu/list');
+            const response = await axios.get<ProductItem[]>('http://yama-new.ru:8088/menu/list');
             setProducts(response.data)
             setLoading(false)
         } finally {
