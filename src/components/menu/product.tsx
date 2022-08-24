@@ -31,12 +31,13 @@ export function Product (props: ProductProps) {
             <div className="product">
                 <span className="product_name">{props.product.name}</span>
                 <span className="product_price">{props.product.price} &#8381;</span>
-                {props.product.description !== '' && <button 
-                    className="product_btn"
-                    onClick={addDescription}
-                >
-                    Подробнее...
-                </button>}
+                {props.product.description !== '' && <div className="product_btn_wrp" onClick={addDescription}>
+                    <button 
+                        className="product_btn"
+                    >
+                        Подробнее...
+                    </button>
+                </div>}
             </div>
             {details && <div className="product_description">
                 <button 
