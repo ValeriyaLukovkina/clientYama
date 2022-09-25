@@ -12,6 +12,9 @@ export function Menu({products} : ProductsProps) {
     return (
         <>
             <div className='wrp'>
+                <div className="bgc_wrp">
+
+                </div>
                 <Navigation/>
                 <div className='shisha group'>
                     <p className='shisha_title group_title'>Кальяны</p>
