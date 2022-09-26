@@ -9,15 +9,17 @@ export function SetupMenu() {
     const [products, setProducts] = useState<ProductItem[]>([])
     const [loading, setLoading] = useState(false)
 
-    async function fetchProducts () {
+    function fetchProducts () {
         setLoading(true)
-        try {
-            const response = await axios.get<ProductItem[]>('http://yama-new.ru:8088/menu/list');
-            setProducts(response.data)
-            setLoading(false)
-        } finally {
-            setLoading(false)
-        }
+        setTimeout(async () => {
+            try {
+                const response = await axios.get<ProductItem[]>('http://yama-new.ru:8088/menu/list');
+                setProducts(response.data)
+                setLoading(false)
+            } finally {
+                setLoading(false)
+            }
+        }, 5000)
     }
 
     useEffect(() => {
