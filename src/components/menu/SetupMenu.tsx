@@ -11,7 +11,7 @@ export function SetupMenu() {
 
     function fetchProducts () {
         setLoading(true)
-        setTimeout(async () => {
+        setTimeout(async () => {   //done
             try {
                 const response = await axios.get<ProductItem[]>('http://yama-new.ru:8088/menu/list');
                 setProducts(response.data)
