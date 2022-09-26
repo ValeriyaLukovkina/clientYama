@@ -41,12 +41,7 @@ body {
     /* overflow: visible; */
 }
 
-/* .wrp {
-    background-image: url('../image/bgc.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} */
+
 
 .bgc_wrp {
     background-image: url('../image/bgc.png');
