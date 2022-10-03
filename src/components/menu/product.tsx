@@ -31,12 +31,8 @@ export function Product (props: ProductProps) {
             <div className="product">
                 <span className="product_name">{props.product.name}</span>
                 <span className="product_price">{props.product.price} &#8381;</span>
-                {props.product.description !== '' && <div className="product_btn_wrp" onClick={addDescription}>
-                    <button 
-                        className="product_btn"
-                    >
-                        Подробнее...
-                    </button>
+                {props.product.imageId &&  <div className="product_btn_wrp" onClick={addDescription}>
+                <img className="product_img" src={'http://yama-new.ru:8088/images/'+props.product.imageId} alt="image" />
                 </div>}
             </div>
             {details && <div className="product_description">

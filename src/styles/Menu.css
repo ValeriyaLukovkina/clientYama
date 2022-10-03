@@ -135,7 +135,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-    height: 123px;
+    min-height: 123px;
     margin-bottom: 13px;
 }
 
@@ -147,6 +147,16 @@ body {
     line-height: 41px;
     color: #FFFFFF;
     margin: 0 0 0 19px;
+    width: 50%;
+}
+
+.product_img {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    height: 100px;
+    width: auto;
+    border-radius: 13px;
 }
 
 .product_price {
